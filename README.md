@@ -1,5 +1,5 @@
 # Tools
-The tools I use for web development, design, and fun
+The tools I use for web development, design, image editing, security, and fun.
 
 **Computer Setup**
 ------------------

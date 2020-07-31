@@ -14,7 +14,7 @@ I've tried all sorts of desks over the years, from the fancy semi-automated stan
 
 ### Generic Computer Chair
 
-Can't find a brand on this one either, but as long as you find a comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic mesh backing to allow your back to breath after long, intense coding sessions to avoid chafing and back sores; then you should be good. 
+Can't find a brand on this one either, but as long as you find a chair that's comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic, and mesh backed, to allow your back to breath after long, intense coding sessions; then you should be good. 
 
 ### [HP 25f external monitor](https://www.bestbuy.com/site/hp-25f-25-ips-led-fhd-freesync-monitor-natural-silver/6219204.p?skuId=6219204)
 

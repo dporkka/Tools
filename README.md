@@ -8,9 +8,17 @@ The tools I use for web development, design, image editing, security, and fun.
 
 Love the feeling and sound of these keys. I could be doing my taxes on this thing and it would sound like I was performing an ASMR album. It's also very reliable, I've never had to wait for it to charge or do any troubleshooting.
 
+### Large Wooden Desk 
+
+I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now.  Don't know the brand, but it's not too unique from other wooden desks. 
+
+### Generic Computer Chair
+
+Can't find a brand on this one either, but as long as you find a comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic mesh backing to allow your back to breath after long, intense coding sessions to avoid chafing and back sores; then you should be good. 
+
 ### [HP 25f external monitor](https://www.bestbuy.com/site/hp-25f-25-ips-led-fhd-freesync-monitor-natural-silver/6219204.p?skuId=6219204)
 
-25" monitor that helps me be more productive when doing web development work or doing most things online.
+This 25" monitor helps me be more productive when doing web development work and most other online things. 
 
 ### [T-90 Giant Spider Inceptor mouse](https://www.amazon.com/Zelotes-T90-Professional-Precision-Breathing/dp/B017VTN6Q2)
 
@@ -20,13 +28,6 @@ After decades of using generic mice, I finally decided to upgrade to a gamer mou
 
 Battery pack to charge my appliances. Comes in handy when traveling or if I forget to charge something and don't feel like waiting for it to charge in a wall socket. It holds 26.8 amp hours of power.
 
-### Large Wooden Desk 
-
-I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now.  Don't know the brand, but it's not too unique from other wooden desks. 
-
-### Generic Computer Chair
-
-Can't find a brand on this one either, but as long as you find a comfortable, height adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic mesh backing to allow your back to breath after long, intense coding sessions to avoid chafing and back sores. 
 
 **Text Editing**
 ----------------
@@ -60,7 +61,7 @@ Entry level DSLR camera that takes decent pics
 
 ### [Adobe XD](https://www.adobe.com/products/xd.html)
 
-Use this program to design websites and build websites from other people's designs.
+Use this program to design websites and build websites from other peoples' designs.
 
 ### [Moqups](https://moqups.com/)
 
@@ -76,7 +77,7 @@ If you're too cheap for photoshop, you can use this free photo-editing program.
 
 ### [XnConvert](https://www.xnview.com/en/xnconvert/)
 
-I use this to do bulk conversions between different types of files.
+I use this to do bulk conversions between different filetypes.
 
 **Music**
 ---------

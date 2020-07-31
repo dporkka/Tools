@@ -43,7 +43,7 @@ Speedy, simple, and has a search function. Very reliable.
 
 Tried a lot of editors, but like using VS Code the best becuase of its extensive feautures, plugins, built-in terminal, and appearance.
 
-### [Waiters Notepads](https://www.amazon.com/Staples-Bound-Memo-Books-11491/dp/B00WKZ3Y88?ref_=fsclp_pl_dp_1)
+### [Mini Notepads](https://www.amazon.com/Staples-Bound-Memo-Books-11491/dp/B00WKZ3Y88?ref_=fsclp_pl_dp_1)
 
 I carry a little notepad with me everywhere to capture good and bad ideas, and to work on ideas when I need a break from the computer.
 
@@ -101,7 +101,7 @@ Use this to make music online. It's basically the full-featured version of garag
 
 Basic digital piano that has everything I need to interface with a music program like Logic or GarageBand. I plan to upgrade soon to something bigger with better touch response.
 
-** Reading ** 
+**Reading** 
 
 ### [Kindle](https://www.amazon.com/Kindle-Now-with-Built-in-Front-Light/dp/B07978J597)
 

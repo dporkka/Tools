@@ -101,7 +101,8 @@ Use this to make music online. It's basically the full-featured version of garag
 
 Basic digital piano that has everything I need to interface with a music program like Logic or GarageBand. I plan to upgrade soon to something bigger with better touch response.
 
-**Reading** 
+**Reading**
+--------------
 
 ### [Kindle](https://www.amazon.com/Kindle-Now-with-Built-in-Front-Light/dp/B07978J597)
 

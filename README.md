@@ -1,6 +1,15 @@
 # Tools
 The tools I use for web development, design, image editing, security, and fun.
 
+## Contents
+
+1. [Computer Setup](#computer-setup)
+2. [Text Editing](#text-editing)
+3. [Web Design and Photography](#web-design-and-photography)
+4. [Music](#music)
+5. [Reading](#reading)
+6. [Security](#security)
+
 **Computer Setup**
 ------------------
 
@@ -8,7 +17,7 @@ The tools I use for web development, design, image editing, security, and fun.
 
 Love the feeling and sound of these keys. I could be doing my taxes on this thing and it would sound like I was performing an ASMR album. It's also very reliable, I've never had to wait for it to charge or do any troubleshooting.
 
-### Large Wooden Desk 
+### Large Wooden Desk
 
 I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now.  Don't know the brand, but it's not too unique from other wooden desks. 
 
@@ -52,7 +61,7 @@ I carry a little notepad with me everywhere to capture good and bad ideas, and t
 
 I like adding a little color to my notes with these pens, I think it makes them more organized and memorable. I also like having the redundancy of four pens in one. 
 
-**Web Design & Photography**
+**Web Design and Photography**
 --------------
 
 ### [Nikon d3400](https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d3400.html)

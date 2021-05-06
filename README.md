@@ -17,6 +17,9 @@ The tools I use for web development, design, image editing, security, and fun.
 
 Love the feeling and sound of these keys. I could be doing my taxes on this thing and it would sound like I was performing an ASMR album. It's also very reliable, I've never had to wait for it to charge or do any troubleshooting.
 
+### [Alfred](https://www.alfredapp.com/)
+Replaced the default spotlight search function on my mac with this software. It makes searching for anything on my computer super fast and I use it multiple times everyday. 
+
 ### Large Wooden Desk
 
 I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now.  Don't know the brand, but it's not too unique from other wooden desks. 

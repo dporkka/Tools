@@ -4,23 +4,37 @@ The tools I use for vibe engineering, security, and fun.
 
 ## Computer Setup
 
+<img width="377" height="288" alt="image" src="https://github.com/user-attachments/assets/5211bd56-e47a-4ac6-a1cd-91ebf348dedd" />
+
 ### [Lenovo T14 Gen 5](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadt/lenovo-thinkpad-t14-gen-5-14-inch-amd/len101t0102?msockid=3f5d44def3a16159180253c1f26e60c0) 
 
-After doing some research trying to find a computer that is Linux-friendly with upgradeable RAM, easy to repair, not too expensive, has a great keyboard with a cute red button in the middle and military grade durability; I stumbled on the this pc. 
+After doing some research trying to find a computer that is Linux-friendly with upgradeable RAM, easy to repair, affordable, good keyboard, and military grade durability; I stumbled on the this pc. 
 
 It can support up to 96 GB of RAM if you can afford that. Currently I'm using like half that and running my other agents via SSH to a beefy cloud machine on Contabo that runs 24/7. 
+
+<img width="307" height="270" alt="image" src="https://github.com/user-attachments/assets/ce17512b-1438-4402-9971-379f2377bcb3" />
 
 ### [AOOSTAR GEM 12 Max](https://www.amazon.com.br/dp/B0DZHC2BGS?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 This powerful, yet [unbeefy](https://www.dictai.org/w/unbeefy) mini pc comes with Ryzen 7 processor and can support up to 128GB of DDR5 RAM, and includes an OCuLink Dual USB4 port that can support an external graphics card like a GPX 4080 for running local AI-models at high speeds.      
 
-### [Logitech K750 solar-powered, wireless keyboard](https://www.logitech.com/en-us/product/wireless-solar-keyboard-k750-mac)
+<img width="501" height="235" alt="image" src="https://github.com/user-attachments/assets/27de393e-127d-48ba-9115-b06a6bb68685" />
 
-Love the feeling and sound of these keys. I could be doing my taxes on this thing and it would sound like I was performing an ASMR album. It's also very reliable, I've never had to wait for it to charge or do any troubleshooting.
+### [Pebble Keys 2 K380s Wireless Keyboard](https://www.logitech.com/en-us/shop/p/pebble-keys-2)
+
+Great keyboard that allows me to work both from my laptop and mini pc at the click of a button. 
+
+<img width="236" height="74" alt="image" src="https://github.com/user-attachments/assets/8684fd8b-4109-465a-960d-d67df8ceabe7" />
+
+### [Synergy Mouse and Keyboard Sync Software](https://symless.com/synergy)
+
+This software allows me to use one mouse to control both my computers at the same time. 
 
 ### Large Wooden Desk
 
 I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now. Don't know the brand, but it's not too unique from other wooden desks.
+
+<img width="331" height="324" alt="image" src="https://github.com/user-attachments/assets/40001736-83f6-46e9-9718-1be56f5076e2" />
 
 ### [LarkLeaves Ergonomic Office Chair](https://www.amazon.com.br/LarkLeaves-Escrit%C3%B3rio-Ergon%C3%B4mica-Ajust%C3%A1vel-Presidente/dp/B0DJX8NKGT/ref=ast_sto_dp_puis?ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1)
 
@@ -70,21 +84,17 @@ I carry a little notepad with me everywhere to capture good and bad ideas, and t
 
 I like adding a little color to my notes with these pens, I think it makes them more organized and memorable. I also like having the redundancy of four pens in one.
 
-## Audio 
+<img width="266" height="313" alt="image" src="https://github.com/user-attachments/assets/d6273edc-2573-4490-80f7-b08062320bba" />
 
 ### [Logitech Zone Vibe 100 Wireless Headset](https://www.amazon.com.br/dp/B0B8C31YXR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 I use these with TTS software like [Whispr Flow](https://wisprflow.ai/) to talk with my AI agents, draft emails, and do other things that would take longer if I were to type them. They provide top-quality audio quality at poverty-level pricing. They are also super lightweight, comfortable, and have a flip-to-mute microphone, and up to 20 hours of battery life and noise cancellation in case you want to hear nothing for 20 hours. 
 
+<img width="359" height="251" alt="image" src="https://github.com/user-attachments/assets/40c194dd-c0c4-4cba-81b1-34a2e4a55e85" />
+
 ### [FIFINE AmpliGame D6 Stream Controller Deck](https://fifinemicrophone.com/collections/ampligame-series/products/fifine-ampligame-d6-stream-deck) 
 
 I use this 15 button macropad to setup one-tap shortcuts to save time on repetitive tasks like reopening tmux sessions, open backend deployment logs, github, run prompts, filing taxes, etc. 
-
-## Reading
-
-### [Kindle](https://www.amazon.com/Kindle-Now-with-Built-in-Front-Light/dp/B07978J597)
-
-I used to use this when I read books, now I just read my agent outputs and that's enough. I used to like how easy it was to save notes and review your notes. It also doesn't blast your eyes with blue light at night, which is probably why I used to sleep better, now I just use AI agents all night long and will probably get Alzheimers, but these tokens ain't gonna burn themselves, unless I learn how to run better ralph loops.
 
 ## Sleep Tech
 

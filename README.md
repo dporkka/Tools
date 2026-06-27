@@ -1,18 +1,18 @@
 # Tools I Use
 
-The tools I use for web development, design, image editing, security, and fun.
-
-## Contents
-
-1. [Computer Setup](#computer-setup)
-2. [Text Editing](#text-editing)
-3. [Web Design & Photography](#web-design--photography)
-4. [Music](#music)
-5. [Reading](#reading)
-6. [Sleep Tech](#sleep-tech)
-7. [Security](#security)
+The tools I use for vibe engineering, security, and fun.
 
 ## Computer Setup
+
+### [Lenovo T14 Gen 5](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadt/lenovo-thinkpad-t14-gen-5-14-inch-amd/len101t0102?msockid=3f5d44def3a16159180253c1f26e60c0) 
+
+After doing some research trying to find a computer that is Linux-friendly with upgradeable RAM, easy to repair, not too expensive, has a great keyboard with a cute red button in the middle and military grade durability; I stumbled on the this pc. 
+
+It can support up to 96 GB of RAM if you can afford that. Currently I'm using like half that and running my other agents via SSH to a beefy cloud machine on Contabo that runs 24/7. 
+
+### [AOOSTAR GEM 12 Max](https://www.amazon.com.br/dp/B0DZHC2BGS?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+
+This powerful, yet [unbeefy](https://www.dictai.org/w/unbeefy) mini pc comes with Ryzen 7 processor and can support up to 128GB of DDR5 RAM, and includes an OCuLink Dual USB4 port that can support an external graphics card like a GPX 4080 for running local AI-models at high speeds.      
 
 ### [Logitech K750 solar-powered, wireless keyboard](https://www.logitech.com/en-us/product/wireless-solar-keyboard-k750-mac)
 
@@ -22,125 +22,89 @@ Love the feeling and sound of these keys. I could be doing my taxes on this thin
 
 I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now. Don't know the brand, but it's not too unique from other wooden desks.
 
-### Generic Computer Chair
+### [LarkLeaves Ergonomic Office Chair](https://www.amazon.com.br/LarkLeaves-Escrit%C3%B3rio-Ergon%C3%B4mica-Ajust%C3%A1vel-Presidente/dp/B0DJX8NKGT/ref=ast_sto_dp_puis?ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1)
 
-Can't find a brand on this one either, but as long as you find a chair that's comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic, and mesh backed, to allow your back to breath after long, intense coding sessions; then you should be good.
+Super comfortable chair that might only be available in Brazil, but as long as you find a chair that's comfortable, height-adjustable, pelvic-tiltable (to avoid back pain and find the partner of your dreams), breathable, ergonomic, and mesh backed to reduce back sweat and improve your intense coding sessions; then you should be good.
 
 ### [HP 25f external monitor](https://www.bestbuy.com/site/hp-25f-25-ips-led-fhd-freesync-monitor-natural-silver/6219204.p?skuId=6219204)
 
-This 25" monitor helps me be more productive when doing web development work and most other online things.
+This 25" monitor helps me be more productive when doing web development work from home and most other online things.
+
+### 16" Portable Monitor 
+
+Use this as a third monitor at home and as a second monitor while traveling. It's pretty sweet. 
 
 ### [T-90 Giant Spider Inceptor mouse](https://www.amazon.com/Zelotes-T90-Professional-Precision-Breathing/dp/B017VTN6Q2)
 
 After decades of using generic mice, I finally decided to upgrade to a gamer mouse and will never go back. This mouse has sensitiviy adjustment, so I can easily change the movement speed, for doing different types of work, (for example: artwork, vs browsing), a double click button, and super ergonomic feel to prevent carpal tunnel syndrome.
 
-### [Rav External Power Pack](https://www.amazon.com/RAVPower-Portable-Charger-26800mAh-External/dp/B012NIQG5E)
+### [Basike Power Bank 65W, 20000mAh Universal Charger](https://www.amazon.com.br/dp/B0G92MZ5F5?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
-Battery pack to charge my appliances. Comes in handy when traveling or if I forget to charge something and don't feel like waiting for it to charge in a wall socket. It holds 26.8 amp hours of power.
+Portable Battery pack that can charge both my laptop and phone while traveling. It can hold a lot of juice in its tiny package. 
+
+## Misc Peripherals 
+
+### [UGREEN Revodok Pro 9-in-1 USB-C Hub](https://www.amazon.com.br/dp/B0DY15GFNG?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
+This peripheral let's me plug in all my other peripherals.
+
+### [Laptop Cooler](https://www.amazon.com.br/dp/B0F3DFQR7F?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
+This keeps my computer and lap cool when I'm working from the couch and also prevents thermal throttling when running agent swarms locally. 
+
+### [Men's Merino Wool Hiking Socks](https://www.amazon.com.br/dp/B0G43LVZLD?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
+People always ask me, "how do you smell so good?", and these are the reason why. These socks have a special blend of merino wool that allows me to go days without stench changing them and still smell fresh. 
 
 ## Text Editing
 
-### Google Docs and Sheets
+### Neovim and Fresh 
 
-I love having everything in the cloud (and locally). It makes accessing all my documents easy from any computer, and also makes me feel good, knowing that if I spill coffee on my computer, my documents will live on.
-
-### Apple Notes
-
-Speedy, simple, and has a search function. Very reliable.
-
-### [Visual Studio Code](https://code.visualstudio.com/)
-
-Tried a lot of editors, but like using VS Code the best because of its extensive features, plugins, built-in terminal, and appearance.
+Neovim is a lightweight, yet powerful text editor that's good for terminal-centric workflows. I also like using Fresh when I need to do quick edits, like edit API keys.  
 
 ### [Mini Notepads](https://www.amazon.com/Staples-Bound-Memo-Books-11491/dp/B00WKZ3Y88?ref_=fsclp_pl_dp_1)
 
-I carry a little notepad with me everywhere to capture good and bad ideas, and to work on ideas when I need a break from the computer.
+I carry a little notepad with me everywhere to capture good and bad ideas, and to work on ideas when I need a break from the computer. 
 
 ### [Bic Multi-Colored Pens](https://www.amazon.com/BIC-4-Color-Ballpoint-Assorted-3-Count/dp/B002JFR8Q8)
 
 I like adding a little color to my notes with these pens, I think it makes them more organized and memorable. I also like having the redundancy of four pens in one.
 
-## Web Design & Photography
+## Audio 
 
-### [Nikon d3400](https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d3400.html)
+### [Logitech Zone Vibe 100 Wireless Headset](https://www.amazon.com.br/dp/B0B8C31YXR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
-Entry level DSLR camera that takes decent pics
+I use these with TTS software like [Whispr Flow](https://wisprflow.ai/) to talk with my AI agents, draft emails, and do other things that would take longer if I were to type them. They provide top-quality audio quality at poverty-level pricing. They are also super lightweight, comfortable, and have a flip-to-mute microphone, and up to 20 hours of battery life and noise cancellation in case you want to hear nothing for 20 hours. 
 
-### [Adobe XD](https://www.adobe.com/products/xd.html)
+### [FIFINE AmpliGame D6 Stream Controller Deck](https://fifinemicrophone.com/collections/ampligame-series/products/fifine-ampligame-d6-stream-deck) 
 
-Use this program to design websites and build websites from other peoples' designs.
-
-### [Moqups](https://moqups.com/)
-
-Also use this for designing websites. I think it's more user friendly than Adobe XD.
-
-### [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
-
-Use this for designing websites and editing photos. Mostly editing photos.
-
-### [Be Funky](https://www.befunky.com/)
-
-If you're too cheap for photoshop, you can use this free photo-editing program.
-
-### [XnConvert](https://www.xnview.com/en/xnconvert/)
-
-I use this to do bulk conversions between different filetypes.
-
-## Music
-
-### [Avantree E171 Sports Earbuds](https://avantree.com/e171-over-the-ear-earbuds)
-
-I've used a lot of earbuds over the years, and these are my favorite so far. They have great sound quality, are indestructible, comfortable, relatively inexpensive, and have ear loops so they don't fall out when running or doing other high-impact things.
-
-### [Audio-technica ATH-M20x Headphones](https://www.audio-technica.com/cms/headphones/2d52765b7d84656c/index.html)
-
-I use these when working on the computer, making music, and moving the lawn. They provide top-quality audio quality at poverty-level pricing. Their over-the-ear fit is also very comfortable and does a nice job reducing outside noises.
-
-### [GarageBand](https://www.apple.com/mac/garageband/)
-
-Use this for simple audio recordings on my phone
-
-### [Logic Pro X](https://www.apple.com/logic-pro/)
-
-Use this to make music online. It's basically the full-featured version of garage band.
-
-### [Graphite 49 MIDI](http://www.samsontech.com/samson/products/usb-midi/keyboard-controllers/graphite49/)
-
-Basic digital piano that has everything I need to interface with a music program like Logic or GarageBand. I plan to upgrade soon to something bigger with better touch response.
+I use this 15 button macropad to setup one-tap shortcuts to save time on repetitive tasks like reopening tmux sessions, open backend deployment logs, github, run prompts, filing taxes, etc. 
 
 ## Reading
 
 ### [Kindle](https://www.amazon.com/Kindle-Now-with-Built-in-Front-Light/dp/B07978J597)
 
-This is what I read most of my books on. Love how easy it is to take notes, and it doesn't blast my eyes with blue light at night, which helps me sleep better.
+I used to use this when I read books, now I just read my agent outputs and that's enough. I used to like how easy it was to save notes and review your notes. It also doesn't blast your eyes with blue light at night, which is probably why I used to sleep better, now I just use AI agents all night long and will probably get Alzheimers, but these tokens ain't gonna burn themselves, unless I learn how to run better ralph loops.
 
 ## Sleep Tech
 
 ### [Orange UVEX blue-light blocking goggles](https://www.amazon.com/Uvex-Blocking-Computer-SCT-Orange-S1933X/dp/B000USRG90#:~:text=Uvex%20Skyper%20Blue%20Light%20Blocking%20Computer%20Glasses%20feature%20an%20orange,inhibit%20vision%20problems%20like%20cataracts.)
 
-I use these goggles when I'm working on the computer late at night to improve my sleep and to spook my neighbors.
+I use these goggles when I'm working on the computer late at night to improve my sleep and to spook my neighbors when looking out the window
 
 ### [Flux](https://justgetflux.com/)
 
-This software gradually decreases the blue-light your computer produces as the day progresses to help you sleep better.
-
-### [Sleep Melodies](https://www.relaxmelodies.com/)
-
-Customizable sleep app that you can use to produce your own relaxing sleep sounds.
+This software gradually decreases the blue-light your computer produces as the day progresses to help you sleep better if you're into that sorta thing.
 
 ## Security
 
-### [LastPass Password Manager](https://www.lastpass.com/)
+### 1password 
 
-It can be easy to get in the habit of reusing passwords for convenience and give up security. This cloud-based password manager can solve this problem by creating random passwords for you and saving them in a secure safe in the cloud that you can access from anywhere.
+It can be easy to get in the habit of reusing passwords for convenience and give up security. This cloud-based password manager can solve this problem by creating random passwords for you and saving them in a secure safe in the cloud that you can access from anywhere. 
 
-### [Private Internet Access VPN](https://www.privateinternetaccess.com/)
+### Proton VPN 
 
-I work at coffee shops a lot and use the pubic wifi. Unfortunately, almost all public wifi networks are unencrypted, which means people could see any of my network activity, including financial transactions, if they wanted to. By using a VPN, you're able to encrypt this traffic to increase your digital privacy and security on public networks.
-
-### [WordFence](https://wordpress.org/plugins/wordfence/)
-
-Use this to secure WordPress sites and prevent armies of robot hackers from brute-forcing their way into my databases and injecting malicious code.
+I work at coffee shops a lot and use the pubic wifi. Unfortunately, almost all public wifi networks are unencrypted, which means people could see any of my network activity, including financial transactions, if they wanted to. By using a VPN, you're able to encrypt this traffic to increase your digital privacy and security on public networks. This is also useful for accessing US-based apps when traveling internationally. 
 
 ### [Cloudflare](https://www.cloudflare.com/?utm_expid=.AQMGpiI2QjmXS6qIoQiqFQ.0&utm_referrer=)
 

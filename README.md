@@ -54,7 +54,7 @@ This keeps my computer and lap cool when I'm working from the couch and also pre
 
 ### [Men's Merino Wool Hiking Socks](https://www.amazon.com.br/dp/B0G43LVZLD?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
-People always ask me, "how do you smell so good?", and these are the reason why. These socks have a special blend of merino wool that allows me to go days without stench changing them and still smell fresh. 
+People always ask me, "how do you smell so good?", and these are the reason why. These socks have a special blend of merino wool that allows me to go days without stench. 
 
 ## Text Editing
 

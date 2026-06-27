@@ -1,6 +1,6 @@
 # Tools I Use
 
-**The hardware behind the software**
+**The hardware and dev tools I use**
 
 ## Computer Setup
 

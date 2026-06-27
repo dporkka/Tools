@@ -1,6 +1,6 @@
 # Tools I Use
 
-The tools I use for vibe engineering, security, and fun.
+**The hardware behind the software**
 
 ## Computer Setup
 

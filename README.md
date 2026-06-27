@@ -1,36 +1,34 @@
-# Tools
+# Tools I Use
+
 The tools I use for web development, design, image editing, security, and fun.
 
 ## Contents
 
 1. [Computer Setup](#computer-setup)
 2. [Text Editing](#text-editing)
-3. [Web Design and Photography](#web-design-and-photography)
+3. [Web Design & Photography](#web-design--photography)
 4. [Music](#music)
 5. [Reading](#reading)
-6. [Security](#security)
+6. [Sleep Tech](#sleep-tech)
+7. [Security](#security)
 
-**Computer Setup**
-------------------
+## Computer Setup
 
 ### [Logitech K750 solar-powered, wireless keyboard](https://www.logitech.com/en-us/product/wireless-solar-keyboard-k750-mac)
 
 Love the feeling and sound of these keys. I could be doing my taxes on this thing and it would sound like I was performing an ASMR album. It's also very reliable, I've never had to wait for it to charge or do any troubleshooting.
 
-### [Alfred](https://www.alfredapp.com/)
-Replaced the default spotlight search function on my mac with this software. It makes searching for anything on my computer super fast and I use it multiple times everyday. 
-
 ### Large Wooden Desk
 
-I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now.  Don't know the brand, but it's not too unique from other wooden desks. 
+I've tried all sorts of desks over the years, from the fancy semi-automated standing desk, to modern glass desks, and temporarily settled on a very boring, but functional 4'W x 3'L wooden desk, that I'm happily using now. Don't know the brand, but it's not too unique from other wooden desks.
 
 ### Generic Computer Chair
 
-Can't find a brand on this one either, but as long as you find a chair that's comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic, and mesh backed, to allow your back to breath after long, intense coding sessions; then you should be good. 
+Can't find a brand on this one either, but as long as you find a chair that's comfortable, height-adjustable, pelvic-tiltable (the pelvic-tilt is crucial to avoid back pain and find the partner of your dreams), breathable, ergonomic, and mesh backed, to allow your back to breath after long, intense coding sessions; then you should be good.
 
 ### [HP 25f external monitor](https://www.bestbuy.com/site/hp-25f-25-ips-led-fhd-freesync-monitor-natural-silver/6219204.p?skuId=6219204)
 
-This 25" monitor helps me be more productive when doing web development work and most other online things. 
+This 25" monitor helps me be more productive when doing web development work and most other online things.
 
 ### [T-90 Giant Spider Inceptor mouse](https://www.amazon.com/Zelotes-T90-Professional-Precision-Breathing/dp/B017VTN6Q2)
 
@@ -40,9 +38,7 @@ After decades of using generic mice, I finally decided to upgrade to a gamer mou
 
 Battery pack to charge my appliances. Comes in handy when traveling or if I forget to charge something and don't feel like waiting for it to charge in a wall socket. It holds 26.8 amp hours of power.
 
-
-**Text Editing**
-----------------
+## Text Editing
 
 ### Google Docs and Sheets
 
@@ -54,7 +50,7 @@ Speedy, simple, and has a search function. Very reliable.
 
 ### [Visual Studio Code](https://code.visualstudio.com/)
 
-Tried a lot of editors, but like using VS Code the best becuase of its extensive feautures, plugins, built-in terminal, and appearance.
+Tried a lot of editors, but like using VS Code the best because of its extensive features, plugins, built-in terminal, and appearance.
 
 ### [Mini Notepads](https://www.amazon.com/Staples-Bound-Memo-Books-11491/dp/B00WKZ3Y88?ref_=fsclp_pl_dp_1)
 
@@ -62,10 +58,9 @@ I carry a little notepad with me everywhere to capture good and bad ideas, and t
 
 ### [Bic Multi-Colored Pens](https://www.amazon.com/BIC-4-Color-Ballpoint-Assorted-3-Count/dp/B002JFR8Q8)
 
-I like adding a little color to my notes with these pens, I think it makes them more organized and memorable. I also like having the redundancy of four pens in one. 
+I like adding a little color to my notes with these pens, I think it makes them more organized and memorable. I also like having the redundancy of four pens in one.
 
-**Web Design and Photography**
---------------
+## Web Design & Photography
 
 ### [Nikon d3400](https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d3400.html)
 
@@ -91,8 +86,7 @@ If you're too cheap for photoshop, you can use this free photo-editing program.
 
 I use this to do bulk conversions between different filetypes.
 
-**Music**
----------
+## Music
 
 ### [Avantree E171 Sports Earbuds](https://avantree.com/e171-over-the-ear-earbuds)
 
@@ -114,15 +108,13 @@ Use this to make music online. It's basically the full-featured version of garag
 
 Basic digital piano that has everything I need to interface with a music program like Logic or GarageBand. I plan to upgrade soon to something bigger with better touch response.
 
-**Reading**
---------------
+## Reading
 
 ### [Kindle](https://www.amazon.com/Kindle-Now-with-Built-in-Front-Light/dp/B07978J597)
 
 This is what I read most of my books on. Love how easy it is to take notes, and it doesn't blast my eyes with blue light at night, which helps me sleep better.
 
-**Sleep Tech**
---------------
+## Sleep Tech
 
 ### [Orange UVEX blue-light blocking goggles](https://www.amazon.com/Uvex-Blocking-Computer-SCT-Orange-S1933X/dp/B000USRG90#:~:text=Uvex%20Skyper%20Blue%20Light%20Blocking%20Computer%20Glasses%20feature%20an%20orange,inhibit%20vision%20problems%20like%20cataracts.)
 
@@ -136,8 +128,7 @@ This software gradually decreases the blue-light your computer produces as the d
 
 Customizable sleep app that you can use to produce your own relaxing sleep sounds.
 
-**Security**
-------------
+## Security
 
 ### [LastPass Password Manager](https://www.lastpass.com/)
 
@@ -153,4 +144,4 @@ Use this to secure WordPress sites and prevent armies of robot hackers from brut
 
 ### [Cloudflare](https://www.cloudflare.com/?utm_expid=.AQMGpiI2QjmXS6qIoQiqFQ.0&utm_referrer=)
 
-Cloudflare offers a very generous free-tier for small and growing websites that allows you to serve your content over their expansive and fast content delivery network (CDN) while simultaneously protecting your site from bots that try to overload your servers or perform other types of digital attacks.  
+Cloudflare offers a very generous free-tier for small and growing websites that allows you to serve your content over their expansive and fast content delivery network (CDN) while simultaneously protecting your site from bots that try to overload your servers or perform other types of digital attacks.

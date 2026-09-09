@@ -3,58 +3,58 @@ name: Reusable Rust CI
 on:
   workflow_call:
     inputs:
-      runs-on:
+      runs_on:
         description: Runner label or group selector accepted by GitHub Actions
         required: false
         type: string
         default: ubuntu-latest
-      rust-version:
+      rust_version:
         required: false
         type: string
         default: stable
-      working-directory:
+      working_directory:
         required: false
         type: string
         default: .
-      timeout-minutes:
+      timeout_minutes:
         required: false
         type: number
         default: 30
-      pre-command:
+      pre_command:
         description: Optional trusted setup command controlled by the caller repository
         required: false
         type: string
         default: ""
-      check-args:
+      check_args:
         required: false
         type: string
         default: --workspace --all-targets
-      clippy-args:
+      clippy_args:
         required: false
         type: string
         default: --workspace --all-targets
-      clippy-deny:
+      clippy_deny:
         description: Lint group passed to `-D`; use an empty string to avoid adding a deny flag
         required: false
         type: string
         default: warnings
-      test-args:
+      test_args:
         required: false
         type: string
         default: --workspace
-      run-fmt:
+      run_fmt:
         required: false
         type: boolean
         default: true
-      run-check:
+      run_check:
         required: false
         type: boolean
         default: true
-      run-clippy:
+      run_clippy:
         required: false
         type: boolean
         default: true
-      run-tests:
+      run_tests:
         required: false
         type: boolean
         default: true
@@ -64,11 +64,11 @@ permissions:
 
 jobs:
   rust:
-    runs-on: ${{ inputs.runs-on }}
-    timeout-minutes: ${{ inputs.timeout-minutes }}
+    runs-on: ${{ inputs.runs_on }}
+    timeout-minutes: ${{ inputs.timeout_minutes }}
     defaults:
       run:
-        working-directory: ${{ inputs.working-directory }}
+        working-directory: ${{ inputs.working_directory }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -76,43 +76,43 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: ${{ inputs.rust-version }}
+          toolchain: ${{ inputs.rust_version }}
           components: rustfmt, clippy
 
       - uses: Swatinem/rust-cache@v2
         with:
-          workspaces: ${{ inputs.working-directory }} -> target
-          shared-key: ${{ github.repository }}-${{ inputs.rust-version }}
+          workspaces: ${{ inputs.working_directory }} -> target
+          shared-key: ${{ github.repository }}-${{ inputs.rust_version }}
 
       - name: Caller setup
-        if: ${{ inputs.pre-command != '' }}
+        if: ${{ inputs.pre_command != '' }}
         shell: bash
-        run: ${{ inputs.pre-command }}
+        run: ${{ inputs.pre_command }}
 
       - name: Format
-        if: ${{ inputs.run-fmt }}
+        if: ${{ inputs.run_fmt }}
         shell: bash
         run: cargo fmt --all --check
 
       - name: Cargo check
-        if: ${{ inputs.run-check }}
+        if: ${{ inputs.run_check }}
         shell: bash
-        run: cargo check ${{ inputs.check-args }}
+        run: cargo check ${{ inputs.check_args }}
 
       - name: Clippy
-        if: ${{ inputs.run-clippy }}
+        if: ${{ inputs.run_clippy }}
         shell: bash
         env:
-          CLIPPY_DENY: ${{ inputs.clippy-deny }}
+          CLIPPY_DENY: ${{ inputs.clippy_deny }}
         run: |
           set -euo pipefail
           if [[ -n "$CLIPPY_DENY" ]]; then
-            cargo clippy ${{ inputs.clippy-args }} -- -D "$CLIPPY_DENY"
+            cargo clippy ${{ inputs.clippy_args }} -- -D "$CLIPPY_DENY"
           else
-            cargo clippy ${{ inputs.clippy-args }}
+            cargo clippy ${{ inputs.clippy_args }}
           fi
 
       - name: Tests
-        if: ${{ inputs.run-tests }}
+        if: ${{ inputs.run_tests }}
         shell: bash
-        run: cargo test ${{ inputs.test-args }}
+        run: cargo test ${{ inputs.test_args }}

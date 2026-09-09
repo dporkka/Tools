@@ -1,0 +1,105 @@
+name: Reusable Rust CI
+
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        description: Runner label or group selector accepted by GitHub Actions
+        required: false
+        type: string
+        default: ubuntu-latest
+      rust-version:
+        required: false
+        type: string
+        default: stable
+      working-directory:
+        required: false
+        type: string
+        default: .
+      timeout-minutes:
+        required: false
+        type: number
+        default: 30
+      pre-command:
+        description: Optional trusted setup command controlled by the caller repository
+        required: false
+        type: string
+        default: ""
+      check-args:
+        required: false
+        type: string
+        default: --workspace --all-targets
+      clippy-args:
+        required: false
+        type: string
+        default: --workspace --all-targets
+      test-args:
+        required: false
+        type: string
+        default: --workspace
+      run-fmt:
+        required: false
+        type: boolean
+        default: true
+      run-check:
+        required: false
+        type: boolean
+        default: true
+      run-clippy:
+        required: false
+        type: boolean
+        default: true
+      run-tests:
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    runs-on: ${{ inputs.runs-on }}
+    timeout-minutes: ${{ inputs.timeout-minutes }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ inputs.rust-version }}
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ${{ inputs.working-directory }} -> target
+          shared-key: ${{ github.repository }}-${{ inputs.rust-version }}
+
+      - name: Caller setup
+        if: ${{ inputs.pre-command != '' }}
+        shell: bash
+        run: ${{ inputs.pre-command }}
+
+      - name: Format
+        if: ${{ inputs.run-fmt }}
+        shell: bash
+        run: cargo fmt --all --check
+
+      - name: Cargo check
+        if: ${{ inputs.run-check }}
+        shell: bash
+        run: cargo check ${{ inputs.check-args }}
+
+      - name: Clippy
+        if: ${{ inputs.run-clippy }}
+        shell: bash
+        run: cargo clippy ${{ inputs.clippy-args }} -- -D warnings
+
+      - name: Tests
+        if: ${{ inputs.run-tests }}
+        shell: bash
+        run: cargo test ${{ inputs.test-args }}

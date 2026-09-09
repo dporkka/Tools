@@ -33,6 +33,11 @@ on:
         required: false
         type: string
         default: --workspace --all-targets
+      clippy-deny:
+        description: Lint group passed to `-D`; use an empty string to avoid adding a deny flag
+        required: false
+        type: string
+        default: warnings
       test-args:
         required: false
         type: string
@@ -97,7 +102,15 @@ jobs:
       - name: Clippy
         if: ${{ inputs.run-clippy }}
         shell: bash
-        run: cargo clippy ${{ inputs.clippy-args }} -- -D warnings
+        env:
+          CLIPPY_DENY: ${{ inputs.clippy-deny }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$CLIPPY_DENY" ]]; then
+            cargo clippy ${{ inputs.clippy-args }} -- -D "$CLIPPY_DENY"
+          else
+            cargo clippy ${{ inputs.clippy-args }}
+          fi
 
       - name: Tests
         if: ${{ inputs.run-tests }}

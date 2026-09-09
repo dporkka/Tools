@@ -3,11 +3,11 @@ name: Reusable Rust CI
 on:
   workflow_call:
     inputs:
-      runs_on:
-        description: Runner label or group selector accepted by GitHub Actions
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
         required: false
         type: string
-        default: ubuntu-latest
+        default: '"ubuntu-latest"'
       rust_version:
         required: false
         type: string
@@ -64,7 +64,7 @@ permissions:
 
 jobs:
   rust:
-    runs-on: ${{ inputs.runs_on }}
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
     timeout-minutes: ${{ inputs.timeout_minutes }}
     defaults:
       run:

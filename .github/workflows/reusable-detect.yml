@@ -8,6 +8,11 @@ on:
         required: false
         type: string
         default: ""
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
     outputs:
       rust:
         description: Rust/Cargo files changed
@@ -39,7 +44,7 @@ permissions:
 
 jobs:
   detect:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
     timeout-minutes: 5
     outputs:
       rust: ${{ steps.changed.outputs.rust }}

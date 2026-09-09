@@ -3,7 +3,7 @@ name: Reusable Affected Areas
 on:
   workflow_call:
     inputs:
-      base-ref:
+      base_ref:
         description: Optional base ref when the caller event does not provide one
         required: false
         type: string
@@ -59,7 +59,7 @@ jobs:
         name: Classify changed files
         shell: bash
         env:
-          INPUT_BASE_REF: ${{ inputs.base-ref }}
+          INPUT_BASE_REF: ${{ inputs.base_ref }}
           EVENT_NAME: ${{ github.event_name }}
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           PUSH_BEFORE_SHA: ${{ github.event.before }}

@@ -1,0 +1,79 @@
+name: Reusable Go CI
+
+on:
+  workflow_call:
+    inputs:
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
+      go_version:
+        required: false
+        type: string
+        default: stable
+      working_directory:
+        required: false
+        type: string
+        default: .
+      timeout_minutes:
+        required: false
+        type: number
+        default: 25
+      pre_command:
+        required: false
+        type: string
+        default: ""
+      test_command:
+        required: false
+        type: string
+        default: go test ./...
+      vet_command:
+        required: false
+        type: string
+        default: go vet ./...
+      build_command:
+        required: false
+        type: string
+        default: go build ./...
+
+permissions:
+  contents: read
+
+jobs:
+  go:
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
+    timeout-minutes: ${{ inputs.timeout_minutes }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.working_directory }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version: ${{ inputs.go_version }}
+          cache: true
+          cache-dependency-path: ${{ inputs.working_directory }}/go.sum
+
+      - name: Caller setup
+        if: ${{ inputs.pre_command != '' }}
+        shell: bash
+        run: ${{ inputs.pre_command }}
+
+      - name: Vet
+        if: ${{ inputs.vet_command != '' }}
+        shell: bash
+        run: ${{ inputs.vet_command }}
+
+      - name: Test
+        if: ${{ inputs.test_command != '' }}
+        shell: bash
+        run: ${{ inputs.test_command }}
+
+      - name: Build
+        if: ${{ inputs.build_command != '' }}
+        shell: bash
+        run: ${{ inputs.build_command }}

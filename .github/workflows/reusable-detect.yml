@@ -1,0 +1,108 @@
+name: Reusable Affected Areas
+
+on:
+  workflow_call:
+    inputs:
+      base_ref:
+        description: Optional base ref when the caller event does not provide one
+        required: false
+        type: string
+        default: ""
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
+    outputs:
+      rust:
+        description: Rust/Cargo files changed
+        value: ${{ jobs.detect.outputs.rust }}
+      node:
+        description: JavaScript/TypeScript/package files changed
+        value: ${{ jobs.detect.outputs.node }}
+      python:
+        description: Python files changed
+        value: ${{ jobs.detect.outputs.python }}
+      go:
+        description: Go files changed
+        value: ${{ jobs.detect.outputs.go }}
+      docker:
+        description: Docker/container files changed
+        value: ${{ jobs.detect.outputs.docker }}
+      infra:
+        description: Infrastructure files changed
+        value: ${{ jobs.detect.outputs.infra }}
+      docs:
+        description: Documentation-only candidates changed
+        value: ${{ jobs.detect.outputs.docs }}
+      ci:
+        description: GitHub workflow/action files changed; callers should normally run all relevant validation
+        value: ${{ jobs.detect.outputs.ci }}
+
+permissions:
+  contents: read
+
+jobs:
+  detect:
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
+    timeout-minutes: 5
+    outputs:
+      rust: ${{ steps.changed.outputs.rust }}
+      node: ${{ steps.changed.outputs.node }}
+      python: ${{ steps.changed.outputs.python }}
+      go: ${{ steps.changed.outputs.go }}
+      docker: ${{ steps.changed.outputs.docker }}
+      infra: ${{ steps.changed.outputs.infra }}
+      docs: ${{ steps.changed.outputs.docs }}
+      ci: ${{ steps.changed.outputs.ci }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - id: changed
+        name: Classify changed files
+        shell: bash
+        env:
+          INPUT_BASE_REF: ${{ inputs.base_ref }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+
+          ZERO_SHA="0000000000000000000000000000000000000000"
+          if [[ "$EVENT_NAME" == "pull_request" && -n "${PR_BASE_SHA:-}" ]]; then
+            BASE="$PR_BASE_SHA"
+          elif [[ "$EVENT_NAME" == "push" && -n "${PUSH_BEFORE_SHA:-}" && "$PUSH_BEFORE_SHA" != "$ZERO_SHA" ]]; then
+            BASE="$PUSH_BEFORE_SHA"
+          elif [[ -n "$INPUT_BASE_REF" ]]; then
+            git fetch --no-tags origin "$INPUT_BASE_REF" --depth=1
+            BASE="FETCH_HEAD"
+          elif git rev-parse HEAD^ >/dev/null 2>&1; then
+            BASE="HEAD^"
+          else
+            BASE="HEAD"
+          fi
+
+          git diff --name-only "$BASE" HEAD > /tmp/changed-files.txt || true
+          cat /tmp/changed-files.txt
+
+          flag() {
+            local name="$1"
+            local regex="$2"
+            if grep -Eq "$regex" /tmp/changed-files.txt; then
+              echo "$name=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "$name=false" >> "$GITHUB_OUTPUT"
+            fi
+          }
+
+          flag rust '(^|/)(Cargo\.toml|Cargo\.lock|rust-toolchain[^/]*|[^/]+\.rs)$'
+          flag node '(^|/)(package\.json|pnpm-lock\.yaml|yarn\.lock|package-lock\.json|bun\.lockb?|[^/]+\.(js|jsx|mjs|cjs|ts|tsx|mts|cts))$'
+          flag python '(^|/)(pyproject\.toml|requirements[^/]*\.txt|poetry\.lock|uv\.lock|Pipfile(\.lock)?|[^/]+\.py)$'
+          flag go '(^|/)(go\.mod|go\.sum|[^/]+\.go)$'
+          flag docker '(^|/)(Dockerfile[^/]*|docker-compose[^/]*\.(yml|yaml)|compose[^/]*\.(yml|yaml))$'
+          flag infra '(^|/)([^/]+\.(tf|tfvars|tofu)|Caddyfile|fly\.toml|wrangler[^/]*\.(toml|jsonc?)|vercel\.json)$'
+          flag docs '(^|/)(README[^/]*|[^/]+\.(md|mdx|rst|adoc))$'
+          flag ci '^\.github/(workflows/|actions/)'

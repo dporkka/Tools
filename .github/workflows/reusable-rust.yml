@@ -1,0 +1,118 @@
+name: Reusable Rust CI
+
+on:
+  workflow_call:
+    inputs:
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
+      rust_version:
+        required: false
+        type: string
+        default: stable
+      working_directory:
+        required: false
+        type: string
+        default: .
+      timeout_minutes:
+        required: false
+        type: number
+        default: 30
+      pre_command:
+        description: Optional trusted setup command controlled by the caller repository
+        required: false
+        type: string
+        default: ""
+      check_args:
+        required: false
+        type: string
+        default: --workspace --all-targets
+      clippy_args:
+        required: false
+        type: string
+        default: --workspace --all-targets
+      clippy_deny:
+        description: Lint group passed to `-D`; use an empty string to avoid adding a deny flag
+        required: false
+        type: string
+        default: warnings
+      test_args:
+        required: false
+        type: string
+        default: --workspace
+      run_fmt:
+        required: false
+        type: boolean
+        default: true
+      run_check:
+        required: false
+        type: boolean
+        default: true
+      run_clippy:
+        required: false
+        type: boolean
+        default: true
+      run_tests:
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
+    timeout-minutes: ${{ inputs.timeout_minutes }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.working_directory }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ inputs.rust_version }}
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ${{ inputs.working_directory }} -> target
+          shared-key: ${{ github.repository }}-${{ inputs.rust_version }}
+
+      - name: Caller setup
+        if: ${{ inputs.pre_command != '' }}
+        shell: bash
+        run: ${{ inputs.pre_command }}
+
+      - name: Format
+        if: ${{ inputs.run_fmt }}
+        shell: bash
+        run: cargo fmt --all --check
+
+      - name: Cargo check
+        if: ${{ inputs.run_check }}
+        shell: bash
+        run: cargo check ${{ inputs.check_args }}
+
+      - name: Clippy
+        if: ${{ inputs.run_clippy }}
+        shell: bash
+        env:
+          CLIPPY_DENY: ${{ inputs.clippy_deny }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$CLIPPY_DENY" ]]; then
+            cargo clippy ${{ inputs.clippy_args }} -- -D "$CLIPPY_DENY"
+          else
+            cargo clippy ${{ inputs.clippy_args }}
+          fi
+
+      - name: Tests
+        if: ${{ inputs.run_tests }}
+        shell: bash
+        run: cargo test ${{ inputs.test_args }}

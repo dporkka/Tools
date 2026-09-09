@@ -1,0 +1,115 @@
+name: Reusable Node CI
+
+on:
+  workflow_call:
+    inputs:
+      runner_json:
+        description: JSON runner selector, e.g. `"ubuntu-latest"` or `["self-hosted","Linux","X64"]`
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
+      node_version:
+        required: false
+        type: string
+        default: "22"
+      working_directory:
+        required: false
+        type: string
+        default: .
+      timeout_minutes:
+        required: false
+        type: number
+        default: 30
+      package_manager:
+        description: npm, pnpm, yarn, or bun
+        required: false
+        type: string
+        default: pnpm
+      install_command:
+        required: false
+        type: string
+        default: ""
+      lint_command:
+        required: false
+        type: string
+        default: ""
+      test_command:
+        required: false
+        type: string
+        default: ""
+      build_command:
+        required: false
+        type: string
+        default: ""
+      pre_command:
+        description: Optional trusted setup command controlled by the caller repository
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  node:
+    runs-on: ${{ fromJSON(inputs.runner_json) }}
+    timeout-minutes: ${{ inputs.timeout_minutes }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.working_directory }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Enable Corepack
+        if: ${{ inputs.package_manager == 'pnpm' || inputs.package_manager == 'yarn' }}
+        shell: bash
+        run: corepack enable
+
+      - name: Install Bun
+        if: ${{ inputs.package_manager == 'bun' }}
+        uses: oven-sh/setup-bun@v2
+
+      - name: Caller setup
+        if: ${{ inputs.pre_command != '' }}
+        shell: bash
+        run: ${{ inputs.pre_command }}
+
+      - name: Install dependencies
+        shell: bash
+        env:
+          PACKAGE_MANAGER: ${{ inputs.package_manager }}
+          INSTALL_COMMAND: ${{ inputs.install_command }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$INSTALL_COMMAND" ]]; then
+            eval "$INSTALL_COMMAND"
+            exit 0
+          fi
+          case "$PACKAGE_MANAGER" in
+            pnpm) pnpm install --frozen-lockfile ;;
+            npm) npm ci ;;
+            yarn) yarn install --immutable ;;
+            bun) bun install --frozen-lockfile ;;
+            *) echo "Unsupported package manager: $PACKAGE_MANAGER" >&2; exit 2 ;;
+          esac
+
+      - name: Lint
+        if: ${{ inputs.lint_command != '' }}
+        shell: bash
+        run: ${{ inputs.lint_command }}
+
+      - name: Test
+        if: ${{ inputs.test_command != '' }}
+        shell: bash
+        run: ${{ inputs.test_command }}
+
+      - name: Build
+        if: ${{ inputs.build_command != '' }}
+        shell: bash
+        run: ${{ inputs.build_command }}

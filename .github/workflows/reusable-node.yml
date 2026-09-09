@@ -3,44 +3,44 @@ name: Reusable Node CI
 on:
   workflow_call:
     inputs:
-      runs-on:
+      runs_on:
         required: false
         type: string
         default: ubuntu-latest
-      node-version:
+      node_version:
         required: false
         type: string
         default: "22"
-      working-directory:
+      working_directory:
         required: false
         type: string
         default: .
-      timeout-minutes:
+      timeout_minutes:
         required: false
         type: number
         default: 30
-      package-manager:
+      package_manager:
         description: npm, pnpm, yarn, or bun
         required: false
         type: string
         default: pnpm
-      install-command:
+      install_command:
         required: false
         type: string
         default: ""
-      lint-command:
+      lint_command:
         required: false
         type: string
         default: ""
-      test-command:
+      test_command:
         required: false
         type: string
         default: ""
-      build-command:
+      build_command:
         required: false
         type: string
         default: ""
-      pre-command:
+      pre_command:
         description: Optional trusted setup command controlled by the caller repository
         required: false
         type: string
@@ -51,11 +51,11 @@ permissions:
 
 jobs:
   node:
-    runs-on: ${{ inputs.runs-on }}
-    timeout-minutes: ${{ inputs.timeout-minutes }}
+    runs-on: ${{ inputs.runs_on }}
+    timeout-minutes: ${{ inputs.timeout_minutes }}
     defaults:
       run:
-        working-directory: ${{ inputs.working-directory }}
+        working-directory: ${{ inputs.working_directory }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -63,27 +63,27 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ inputs.node-version }}
+          node-version: ${{ inputs.node_version }}
 
       - name: Enable Corepack
-        if: ${{ inputs.package-manager == 'pnpm' || inputs.package-manager == 'yarn' }}
+        if: ${{ inputs.package_manager == 'pnpm' || inputs.package_manager == 'yarn' }}
         shell: bash
         run: corepack enable
 
       - name: Install Bun
-        if: ${{ inputs.package-manager == 'bun' }}
+        if: ${{ inputs.package_manager == 'bun' }}
         uses: oven-sh/setup-bun@v2
 
       - name: Caller setup
-        if: ${{ inputs.pre-command != '' }}
+        if: ${{ inputs.pre_command != '' }}
         shell: bash
-        run: ${{ inputs.pre-command }}
+        run: ${{ inputs.pre_command }}
 
       - name: Install dependencies
         shell: bash
         env:
-          PACKAGE_MANAGER: ${{ inputs.package-manager }}
-          INSTALL_COMMAND: ${{ inputs.install-command }}
+          PACKAGE_MANAGER: ${{ inputs.package_manager }}
+          INSTALL_COMMAND: ${{ inputs.install_command }}
         run: |
           set -euo pipefail
           if [[ -n "$INSTALL_COMMAND" ]]; then
@@ -99,16 +99,16 @@ jobs:
           esac
 
       - name: Lint
-        if: ${{ inputs.lint-command != '' }}
+        if: ${{ inputs.lint_command != '' }}
         shell: bash
-        run: ${{ inputs.lint-command }}
+        run: ${{ inputs.lint_command }}
 
       - name: Test
-        if: ${{ inputs.test-command != '' }}
+        if: ${{ inputs.test_command != '' }}
         shell: bash
-        run: ${{ inputs.test-command }}
+        run: ${{ inputs.test_command }}
 
       - name: Build
-        if: ${{ inputs.build-command != '' }}
+        if: ${{ inputs.build_command != '' }}
         shell: bash
-        run: ${{ inputs.build-command }}
+        run: ${{ inputs.build_command }}
